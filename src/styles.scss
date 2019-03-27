@@ -1,0 +1,44 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  .post {
+    height: 300px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.post {
+  display: inline-flex;
+  flex-direction: column;
+
+  text-align: left;
+  padding: 10px;
+
+  border: 1px solid #ddd;
+  background-color: #eee;
+
+  &__title {
+    font-weight: 600;
+    font-size: 2em;
+  }
+  &__body {
+    flex: 1;
+    font-size: 1.3em;
+  }
+  &__footer {
+    justify-self: flex-end;
+    font-size: 0.8em;
+    font-style: italic;
+  }
+}
