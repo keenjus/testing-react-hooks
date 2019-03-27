@@ -2,6 +2,7 @@ import * as React from "react";
 import { render } from "react-dom";
 import axios from "axios";
 
+import "bulma/css/bulma.css";
 import "./styles.scss";
 
 async function fetchPosts() {
@@ -11,10 +12,16 @@ async function fetchPosts() {
 
 function PostRenderer(post) {
   return (
-    <div className="post">
-      <div className="post__title">{post.title}</div>
-      <div className="post__body">{post.body}</div>
-      <div className="post__footer">{post.id}</div>
+    <div className="card">
+      <header className="card-header">
+        <p className="card-header-title">{post.title}</p>
+      </header>
+      <div className="card-content">
+        <div className="content">{post.body}</div>
+      </div>
+      <footer className="card-footer">
+        <div className="card-footer-item">{post.id}</div>
+      </footer>
     </div>
   );
 }
